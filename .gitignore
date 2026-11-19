@@ -1,0 +1,42 @@
+# Секреты
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node.js
+node_modules/
+dist/
+npm-debug.log*
+
+# Данные, логи, временное
+data/
+logs/
+*.log
+tmp/*
+!tmp/.gitkeep
+
+# Редакторы и ОС
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Служебные файлы ассистентов (источник правил — AGENTS*.md)
+CLAUDE.md
+.claude/
+.cursor/
+.github/copilot-instructions.md
+.windsurfrules
+.cursorrules
+.clinerules
+.aider.conf.yml
+GEMINI.md

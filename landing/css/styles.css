@@ -1,17 +1,19 @@
 :root {
-  --color-bg: #0b1220;
-  --color-bg-alt: #0e1729;
-  --color-surface: #141d33;
-  --color-border: #2b3a63;
-  --color-text: #e9eef8;
-  --color-muted: #a9b6cf;
-  --color-s: #4cc2ff;
-  --color-m: #ffb454;
-  --color-s-soft: rgba(76, 194, 255, 0.45);
-  --color-m-soft: rgba(255, 180, 84, 0.45);
-  --color-s-glow: rgba(76, 194, 255, 0.16);
-  --color-m-glow: rgba(255, 180, 84, 0.14);
-  --gradient-duo: linear-gradient(100deg, var(--color-s), var(--color-m));
+  --color-bg: #f5f8fd;
+  --color-bg-alt: #eaf0f9;
+  --color-surface: #ffffff;
+  --color-border: #d7e0ee;
+  --color-text: #16233a;
+  --color-muted: #55647e;
+  --color-s: #0074c4;
+  --color-m: #00a320d9;
+  --color-s-soft: rgba(0, 116, 196, 0.45);
+  --color-m-soft: rgba(163, 92, 0, 0.45);
+  --color-s-glow: rgba(30, 157, 224, 0.13);
+  --color-m-glow: rgba(245, 166, 35, 0.16);
+  --color-on-accent: #101b2d;
+  --gradient-duo: linear-gradient(100deg, #1e9de0, #2623f5ad);
+  --gradient-text: linear-gradient(100deg, #0074c4, #53af42);
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --size-h1: clamp(2.6rem, 9vw, 4.6rem);
   --size-h2: clamp(1.7rem, 5vw, 2.3rem);
@@ -62,7 +64,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: rgba(11, 18, 32, 0.85);
+  background-color: rgba(245, 248, 253, 0.86);
   border-bottom: 1px solid var(--color-border);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -94,7 +96,7 @@ a {
   height: 2rem;
   border-radius: 6px;
   background-image: var(--gradient-duo);
-  color: var(--color-bg);
+  color: var(--color-on-accent);
   font-weight: 800;
 }
 
@@ -128,10 +130,7 @@ a {
   margin: 0 0 var(--space-s);
   font-size: var(--size-h1);
   line-height: 1.05;
-  background-image: var(--gradient-duo);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-s);
 }
 
 .hero__tagline {
@@ -155,22 +154,22 @@ a {
 .button {
   display: inline-block;
   padding: 0.7rem 1.3rem;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-s-soft);
   border-radius: 999px;
-  color: var(--color-text);
+  color: var(--color-s);
   font-weight: 600;
   text-decoration: none;
 }
 
 .button:hover,
 .button:focus-visible {
-  border-color: var(--color-muted);
+  border-color: var(--color-s);
 }
 
 .button--primary {
-  background-image: var(--gradient-duo);
+  background-color: var(--color-s);
   border-color: transparent;
-  color: var(--color-bg);
+  color: var(--color-surface);
 }
 
 .section {
@@ -231,7 +230,7 @@ section[id] {
   margin-bottom: var(--space-s);
   border-radius: 50%;
   background-image: var(--gradient-duo);
-  color: var(--color-bg);
+  color: var(--color-on-accent);
   font-weight: 700;
 }
 
@@ -288,7 +287,7 @@ section[id] {
 .decode__letter[aria-pressed="true"] {
   background-image: var(--gradient-duo);
   border-color: transparent;
-  color: var(--color-bg);
+  color: var(--color-on-accent);
 }
 
 .decode__letter--s {
@@ -337,7 +336,7 @@ section[id] {
   font-size: 2.2rem;
   font-weight: 800;
   line-height: 1;
-  background-image: var(--gradient-duo);
+  background-image: var(--gradient-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -474,7 +473,7 @@ section[id] {
   margin: 0;
   font-size: clamp(1.2rem, 4vw, 1.6rem);
   font-weight: 700;
-  background-image: var(--gradient-duo);
+  background-image: var(--gradient-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
